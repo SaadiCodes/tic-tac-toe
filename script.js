@@ -29,10 +29,10 @@ function Game() {
         winConditions.forEach((element) => {
             if (divs[element[0]].textContent == 'X' && divs[element[1]].textContent == 'X' && divs[element[2]].textContent == 'X') {
                 alert("Player 1 has won!")
-                location.reload()
+                setTImeout(function() {location.reload()}, 2000)
             }
             else if (turn == 10) {
-                location.reload()
+                setTImeout(function() {location.reload()}, 2000)
             }
         })
     }
@@ -43,10 +43,10 @@ function Game() {
         winConditions.forEach((element) => {
             if (divs[element[0]].textContent == 'O' && divs[element[1]].textContent == 'O' && divs[element[2]].textContent == 'O') {
                 alert("Player 2 has won!")
-                location.reload()
+                setTImeout(function() {location.reload()}, 2000)
             }
             else if (turn == 10) {
-                location.reload()
+                setTImeout(function() {location.reload()}, 2000)
                 
             }
         })
